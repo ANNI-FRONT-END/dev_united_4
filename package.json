@@ -1,0 +1,21 @@
+{
+    "name": "acamica-sprint-4",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview"
+    },
+    "dependencies": {
+      "firebase": "^9.6.4",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-router-dom": "^6.2.1"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-react": "^1.1.4",
+      "eslint": "^8.8.0",
+      "eslint-config-react-app": "^7.0.0",
+      "vite": "^2.7.2"
+    }
+  }
