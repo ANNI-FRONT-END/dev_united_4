@@ -1,9 +1,8 @@
-import React from "react"
+import React from "react";
+import Button_login from "./Button_login/Button_login";
 
-function App () {
-    return(
-        <h1>pruebaaa</h1>
-    )
+function App() {
+  return <Button_login />;
 }
 
-export default App
+export default App;
