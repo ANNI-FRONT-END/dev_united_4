@@ -4,6 +4,7 @@ import { FirebaseAppProvider } from "reactfire";
 import { firebaseConfig } from "../firebase";
 import App from "./componentes/App";
 import { BrowserRouter } from "react-router-dom";
+import { Context } from "./context/AppContext";
 
 import "./index.css";
 
@@ -11,7 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <FirebaseAppProvider firebaseConfig={firebaseConfig}>
       <BrowserRouter>
-        <App />
+        <Context>
+          <App />
+        </Context>
       </BrowserRouter>
     </FirebaseAppProvider>
   </React.StrictMode>,

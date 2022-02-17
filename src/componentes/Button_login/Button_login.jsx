@@ -3,16 +3,29 @@ import "./Button_login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
+import { doc, getFirestore, setDoc } from "firebase/firestore";
+import { AppContext } from "../../context/AppContext";
 
 function ButtonLogin() {
   const auth = getAuth();
+  const db = getFirestore();
   const navigate = useNavigate();
+
   const provider = new GoogleAuthProvider();
+
+  async function addUsers(data) {
+    await setDoc(doc(db, "users", data.user.uid), {
+      color: "",
+      photo: data.user.photoURL,
+      uid: data.user.uid,
+      username: "",
+    });
+  }
 
   function login() {
     try {
       signInWithPopup(auth, provider).then((userData) => {
-        console.log(userData);
+        addUsers(userData);
         navigate("/Registro");
       });
     } catch (error) {
