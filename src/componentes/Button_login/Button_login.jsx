@@ -1,16 +1,23 @@
 import React from "react";
-import "./button_login.css";
+import "./Button_login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../../../firebase";
+import { useNavigate } from "react-router-dom";
 
 function ButtonLogin() {
   const auth = getAuth();
+  const navigate = useNavigate();
   const provider = new GoogleAuthProvider();
 
   function login() {
-    signInWithPopup(auth, provider).then((userData) => {
-      console.log(userData);
-    });
+    try {
+      signInWithPopup(auth, provider).then((userData) => {
+        console.log(userData);
+        navigate("/Registro");
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (

@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100;1,400;1,500;1,600&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #2e132c;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  width: 605px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.header img {
+  height: 33px;
+}
+
+.header img.nombre {
+  width: 87px;
+  height: 11px;
+}
+
+.comentario {
+  display: flex;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #150714;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  height: 218px;
+  padding: 20px;
+}
+
+.comentario .caja_escribir {
+  width: 605px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #150714;
+  padding: 10px;
+}
+
+.comentario .caja_escribir .input {
+  width: 470px;
+  height: 113px;
+  display: flex;
+  background-color: #2f112d;
+  color: #914d8b;
+  padding: 20px;
+}
+
+.comentario .caja_escribir img {
+  background-color: #150714;
+}
+
+.comentario button {
+  margin-left: 450px;
+  width: 102px;
+  height: 35px;
+  color: #150714;
+  font-weight: 1000;
+  font-size: 20px;
+}
+
+.comentarios {
+  display: flex;
+  font-family: sans-serif;
+  text-align: center;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: center;
+  width: 605px;
+  height: 100vmax;
+}
