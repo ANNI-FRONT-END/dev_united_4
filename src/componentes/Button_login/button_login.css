@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100;1,400;1,500;1,600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100;1,400;1,500;1,600&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +23,7 @@
 }
 
 .login-der h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Fira Code", monospace;
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
@@ -34,7 +34,7 @@
 
 .login-der p {
   margin: 37px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Fira Code", monospace;
   font-style: normal;
   font-weight: 450;
   font-size: 24px;
@@ -82,7 +82,7 @@
 .login-der .info {
   border-radius: 10px;
   color: #60265b;
-  font-family: "Poppins", sans-serif;
+  font-family: "Fira Code", monospace;
   font-style: normal;
   font-weight: 450;
   font-size: 24px;

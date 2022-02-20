@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Button_login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../../../firebase";
@@ -10,11 +10,18 @@ function ButtonLogin() {
   const auth = getAuth();
   const db = getFirestore();
   const navigate = useNavigate();
+  const { userData, setUserData } = useContext(AppContext);
 
   const provider = new GoogleAuthProvider();
 
   async function addUsers(data) {
     await setDoc(doc(db, "users", data.user.uid), {
+      color: "",
+      photo: data.user.photoURL,
+      uid: data.user.uid,
+      username: "",
+    });
+    setUserData({
       color: "",
       photo: data.user.photoURL,
       uid: data.user.uid,

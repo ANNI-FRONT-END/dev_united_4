@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100;1,400;1,500;1,600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100;1,400;1,500;1,600&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@ header {
 
 .comentario {
   display: flex;
-  font-family: sans-serif;
+  font-family: "Fira Code", monospace;
   text-align: center;
   background-color: #150714;
   flex-direction: column;
@@ -70,13 +70,46 @@ header {
   font-size: 20px;
 }
 
+.home_comentarios {
+  display: flex;
+  justify-content: center;
+}
+
 .comentarios {
   display: flex;
-  font-family: sans-serif;
-  text-align: center;
-  flex-direction: row;
+  justify-content: center;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
   align-items: flex-start;
-  align-content: center;
-  width: 605px;
-  height: 100vmax;
+  width: 550px;
+  padding-top: 28px;
+  color: #ffffff;
+}
+
+.comentarios .img_perfil {
+  padding-right: 50px;
+  align-items: center;
+}
+.comentarios .user_name_fecha {
+  display: flex;
+  font-family: "Fira Code", monospace;
+}
+
+.comentarios .user_name_fecha .username {
+  background-color: #800fff;
+  color: #150714;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.comentarios .btn_comentarios {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.comentarios .btn_comentarios img {
+  width: 24px;
+  height: 20px;
 }
