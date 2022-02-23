@@ -39,6 +39,12 @@ function ButtonLogin() {
     const ref = doc(db, "users", userData.user.uid);
     const user = await getDoc(ref);
     if (user.exists()) {
+      setUserData({
+        color: "",
+        photo: userData.user.photoURL,
+        uid: userData.user.uid,
+        username: "",
+      });
       navigate("/Home");
     } else {
       addUsers(userData);
