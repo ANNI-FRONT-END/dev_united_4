@@ -1,25 +1,16 @@
 import React, { useState, useContext } from "react";
 import "./Pagina_inicio.css";
+import { AppContext } from "../../context/AppContext";
 
 function Pagina_inicio() {
-  const [comentario, setComentario] = useState("");
-
-  async function actualizarComenttario() {
-    //referencia de usuario en la db(uid)
-    const userRef = doc(db, "users", userData.uid);
-
-    // Set the "capital" field of the city 'DC'
-    await updateDoc(userRef, {
-      color: "",
-      username: username,
-    });
-  }
+  const { userData, setUserData } = useContext(AppContext);
 
   return (
     <>
+      {console.log(userData)}
       <header>
         <section className="header">
-          <img src="./img/profilePic.png" alt="" />
+          <img className="perfil_photo" src={userData.photo} alt="" />
           <img src="./img/bandera_log.png" alt="" />
           <img className="nombre" src="./img/devs_united.png" alt="" />
         </section>
@@ -27,7 +18,7 @@ function Pagina_inicio() {
       <main>
         <section className="comentario">
           <div className="caja_escribir">
-            <img src="./img/profilePic.png" alt="" />
+            <img src={userData.photo} alt="" />
             <input
               className="input"
               type="text"

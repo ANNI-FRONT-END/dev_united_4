@@ -3,7 +3,7 @@ import "./Button_login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
-import { doc, getFirestore, setDoc } from "firebase/firestore";
+import { doc, getFirestore, setDoc, getDoc } from "firebase/firestore";
 import { AppContext } from "../../context/AppContext";
 
 function ButtonLogin() {
@@ -28,12 +28,28 @@ function ButtonLogin() {
       username: "",
     });
   }
+  /*
+  Ir al usuario y buscar la propiedad username
+  traer la data
+  buscar usuarNAME
+  condición (username === true ) ? home : registro 
+  
+  */
+  async function isUserInFirebase(userData) {
+    const ref = doc(db, "users", userData.user.uid);
+    const user = await getDoc(ref);
+    if (user.exists()) {
+      navigate("/Home");
+    } else {
+      addUsers(userData);
+      navigate("/Registro");
+    }
+  }
 
   function login() {
     try {
       signInWithPopup(auth, provider).then((userData) => {
-        addUsers(userData);
-        navigate("/Registro");
+        isUserInFirebase(userData);
       });
     } catch (error) {
       console.log(error);

@@ -22,6 +22,10 @@ header {
   height: 33px;
 }
 
+.perfil_photo {
+  border-radius: 50%;
+}
+
 .header img.nombre {
   width: 87px;
   height: 11px;
@@ -55,10 +59,11 @@ header {
   background-color: #2f112d;
   color: #914d8b;
   padding: 20px;
+  border: none;
 }
 
 .comentario .caja_escribir img {
-  background-color: #150714;
+  border-radius: 50%;
 }
 
 .comentario button {
@@ -68,6 +73,7 @@ header {
   color: #150714;
   font-weight: 1000;
   font-size: 20px;
+  border: none;
 }
 
 .home_comentarios {
@@ -107,6 +113,7 @@ header {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
+  border: none;
 }
 
 .comentarios .btn_comentarios img {
