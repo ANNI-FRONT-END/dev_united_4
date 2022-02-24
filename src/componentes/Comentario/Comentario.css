@@ -1,0 +1,44 @@
+.home_comentarios {
+  display: flex;
+  justify-content: center;
+}
+
+.comentarios {
+  display: flex;
+  justify-content: center;
+  font-family: "Fira Code", monospace;
+  font-weight: 400;
+  align-items: flex-start;
+  width: 550px;
+  padding-top: 28px;
+  color: #ffffff;
+}
+
+.comentarios .img_perfil {
+  padding-right: 50px;
+  align-items: center;
+}
+.comentarios .user_name_fecha {
+  display: flex;
+  font-family: "Fira Code", monospace;
+}
+
+.comentarios .user_name_fecha .username {
+  background-color: #800fff;
+  color: #150714;
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.comentarios .btn_comentarios {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+}
+
+.comentarios .btn_comentarios img {
+  width: 24px;
+  height: 20px;
+}

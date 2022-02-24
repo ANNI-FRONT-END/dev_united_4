@@ -1,0 +1,69 @@
+header {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  width: 605px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.header img {
+  height: 33px;
+}
+
+.perfil_photo {
+  border-radius: 50%;
+}
+
+.header img.nombre {
+  width: 87px;
+  height: 11px;
+}
+
+.comentario {
+  display: flex;
+  font-family: "Fira Code", monospace;
+  text-align: center;
+  background-color: #150714;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  height: 218px;
+  padding: 20px;
+}
+
+.comentario .caja_escribir {
+  width: 605px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #150714;
+  padding: 10px;
+}
+
+.comentario .caja_escribir .input {
+  width: 470px;
+  height: 113px;
+  display: flex;
+  background-color: #2f112d;
+  color: #914d8b;
+  padding: 20px;
+  border: none;
+}
+
+.comentario .caja_escribir img {
+  border-radius: 50%;
+}
+
+.comentario button {
+  margin-left: 450px;
+  width: 102px;
+  height: 35px;
+  color: #150714;
+  font-weight: 1000;
+  font-size: 20px;
+  border: none;
+}
