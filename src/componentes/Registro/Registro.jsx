@@ -18,6 +18,10 @@ function Registro() {
       color: "",
       username: username,
     });
+    setUserData({
+      ...userData,
+      username: username,
+    });
   }
 
   return (

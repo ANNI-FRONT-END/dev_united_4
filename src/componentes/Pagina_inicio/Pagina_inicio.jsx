@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Pagina_inicio.css";
 import { AppContext } from "../../context/AppContext";
-import Comentario from "../Comentario/Comentario";
+import Comentarios from "../Comentarios/Comentarios";
 import Header_home from "../Header_home/Header_home";
 
 function Pagina_inicio() {
@@ -10,7 +10,7 @@ function Pagina_inicio() {
   return (
     <>
       <Header_home />
-      <Comentario />
+      <Comentarios />
     </>
   );
 }

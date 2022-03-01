@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import "./Header_home.css";
 import { AppContext } from "../../context/AppContext";
 import { collection, doc, setDoc, getFirestore } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 function Header_home() {
   const { userData, setUserData } = useContext(AppContext);
@@ -20,13 +21,16 @@ function Header_home() {
     };
 
     await setDoc(referencia, tweetData);
+    setComentario("");
   }
 
   return (
     <>
       <header>
         <section className="header">
-          <img className="perfil_photo" src={userData.photo} alt="" />
+          <Link to={"/Perfil"}>
+            <img className="perfil_photo" src={userData.photo} alt="" />
+          </Link>
           <img src="./img/bandera_log.png" alt="" />
           <img className="nombre" src="./img/devs_united.png" alt="" />
         </section>
@@ -42,6 +46,7 @@ function Header_home() {
               onChange={(e) => {
                 setComentario(e.target.value);
               }}
+              value={comentario}
             />
           </div>
 

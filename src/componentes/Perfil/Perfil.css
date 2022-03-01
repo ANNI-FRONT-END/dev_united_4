@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100;1,400;1,500;1,600&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #2e132c;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+.header {
+  width: 605px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.devolverse {
+  width: 150px;
+  border: none;
+}
+
+.devolverse img {
+  height: 16px;
+  margin-right: 10px;
+}
+.devolverse .header_username {
+  color: white;
+  font-size: 20px;
+}
+.logout {
+  width: 116px;
+  height: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f50d5a;
+  border: none;
+  cursor: pointer;
+}
+
+.logout > span {
+  background-color: #f50d5a;
+}
+.logout > img {
+  background-color: #f50d5a;
+}
+#link {
+  text-decoration: none;
+}
+
+.perfil_usuario {
+  display: flex;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #150714;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  height: 270px;
+  padding: 20px;
+}
+
+.perfil_usuario .perfil {
+  width: 605px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #150714;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.perfil_usuario img {
+  background-color: #150714;
+  width: 134px;
+  border: solid 1px;
+}
+
+.perfil_usuario .btn_perfil {
+  width: 605px;
+  height: 35px;
+  color: #150714;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+}
+
+.perfil_usuario .btn_perfil > button {
+  width: 50%;
+  height: 46px;
+  border: none;
+  color: #150714;
+}
+.perfil_usuario .btn_perfil > button.btn_favorites {
+  width: 50%;
+  height: 46px;
+  border: none;
+  color: #150714;
+  background-color: #60265b;
+}

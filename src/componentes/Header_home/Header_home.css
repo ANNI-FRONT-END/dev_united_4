@@ -16,6 +16,7 @@ header {
 
 .perfil_photo {
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .header img.nombre {
@@ -66,4 +67,5 @@ header {
   font-weight: 1000;
   font-size: 20px;
   border: none;
+  cursor: pointer;
 }
