@@ -3,7 +3,7 @@
   justify-content: space-around;
   font-family: "Fira Code", monospace;
   font-weight: 400;
-  width: 450px;
+  width: 550px;
   padding: 28px;
   color: #ffffff;
 }
@@ -11,9 +11,9 @@
 .comentarios .img_perfil {
   width: 60px;
   height: 60px;
-  padding-right: 50px;
+  border-radius: 50%;
   align-items: center;
-  background-color: aqua;
+  margin-right: 20px;
 }
 
 .comentarios .user_name_fecha {

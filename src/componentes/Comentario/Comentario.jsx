@@ -11,7 +11,7 @@ function Comentario({ comentario, fecha, id, likes, photo, username }) {
         <img className="img_perfil" src={photo} alt="" />
         <div>
           <div className="user_name_fecha">
-            <h1 className="username">{username} hola </h1>
+            <h1 className="username">{username} </h1>
             <h3>- {fecha} </h3>
           </div>
           <p>{comentario}</p>
