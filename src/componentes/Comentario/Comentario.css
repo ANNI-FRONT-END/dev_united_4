@@ -1,26 +1,25 @@
-.home_comentarios {
-  display: flex;
-  justify-content: center;
-}
-
 .comentarios {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   font-family: "Fira Code", monospace;
   font-weight: 400;
-  align-items: flex-start;
-  width: 550px;
-  padding-top: 28px;
+  width: 450px;
+  padding: 28px;
   color: #ffffff;
 }
 
 .comentarios .img_perfil {
+  width: 60px;
+  height: 60px;
   padding-right: 50px;
   align-items: center;
+  background-color: aqua;
 }
+
 .comentarios .user_name_fecha {
   display: flex;
   font-family: "Fira Code", monospace;
+  margin-bottom: 20px;
 }
 
 .comentarios .user_name_fecha .username {
@@ -28,17 +27,25 @@
   color: #150714;
   font-size: 20px;
   padding: 5px;
-  margin-bottom: 15px;
+  margin-right: 20px;
 }
 
-.comentarios .btn_comentarios {
+.comentarios .btn_like {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
   border: none;
+  cursor: pointer;
 }
 
 .comentarios .btn_comentarios img {
   width: 24px;
   height: 20px;
+}
+
+.comentarios .btn_vasura {
+  width: 24px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
 }
