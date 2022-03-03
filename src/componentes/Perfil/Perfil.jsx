@@ -3,17 +3,35 @@ import "./Perfil.css";
 import { AppContext } from "../../context/AppContext";
 import { collection, doc, setDoc, getFirestore } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import Comentario from "../Comentario/Comentario";
 
-function Perfil({ photo, username }) {
-  const { userData, setUserData } = useContext(AppContext);
+function Perfil() {
+  const { userData, setUserData, tweets, setTweets } = useContext(AppContext);
+  const posts = tweets.filter((tweet) => {
+    return tweet.uidDueño === userData.uid;
+  });
+
+  const favoritos = tweets.filter((tweet) => {
+    return tweet.likes.includes(userData.uid);
+  });
+
+  const [postOFavoritos, setPostOFavoritos] = useState(true);
+
+  function cambiarTweets(value) {
+    setPostOFavoritos(value);
+  }
+
   return (
     <>
       <header>
         <section className="header">
-          <button className="devolverse">
-            <img src={photo} alt="" />
-            <span className="header_username">{username}</span>
-          </button>
+          <Link id="link" to={"/Home"}>
+            <button className="devolverse">
+              <img src="../../../img/vector_ir_atras.png" alt="" />
+              <span className="header_username">{userData.username}</span>
+            </button>
+          </Link>
+
           <Link id="link" to={"/"}>
             <button className="logout">
               <span>LOGOUT</span>
@@ -25,15 +43,40 @@ function Perfil({ photo, username }) {
       <main>
         <section className="perfil_usuario">
           <div className="perfil">
-            <img src="./img/profilePic.png" alt="" />
-            <span>USERNAME</span>
+            <img src={userData.photo} alt="" />
+            <span>{userData.username}</span>
           </div>
           <div className="btn_perfil">
-            <button className="btn_posts">POSTS</button>
-            <button className="btn_favorites">FAVORITES</button>
+            <button
+              className="btn_posts"
+              onClick={() => {
+                cambiarTweets(true);
+              }}
+            >
+              POSTS
+            </button>
+            <button
+              className="btn_favorites"
+              onClick={() => {
+                cambiarTweets(false);
+              }}
+            >
+              FAVORITES
+            </button>
           </div>
         </section>
       </main>
+      <div className="tweets_contenedor">
+        {postOFavoritos &&
+          posts.map((post) => {
+            return <Comentario {...post} key={post.id} />;
+          })}
+
+        {!postOFavoritos &&
+          favoritos.map((favorito) => {
+            return <Comentario {...favorito} key={favorito.id} />;
+          })}
+      </div>
     </>
   );
 }

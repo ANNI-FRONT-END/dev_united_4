@@ -22,6 +22,7 @@ header {
 .devolverse {
   width: 150px;
   border: none;
+  cursor: pointer;
 }
 
 .devolverse img {
@@ -95,6 +96,7 @@ header {
   height: 46px;
   border: none;
   color: #150714;
+  cursor: pointer;
 }
 .perfil_usuario .btn_perfil > button.btn_favorites {
   width: 50%;
@@ -102,4 +104,11 @@ header {
   border: none;
   color: #150714;
   background-color: #60265b;
+}
+
+.tweets_contenedor {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
 }

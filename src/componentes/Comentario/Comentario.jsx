@@ -1,7 +1,14 @@
 import React, { useState, useContext } from "react";
 import "./Comentario.css";
 import { AppContext } from "../../context/AppContext";
-import { deleteDoc, doc, getFirestore } from "firebase/firestore";
+import {
+  deleteDoc,
+  doc,
+  getFirestore,
+  updateDoc,
+  arrayUnion,
+  arrayRemove,
+} from "firebase/firestore";
 
 function Comentario({
   comentario,
@@ -14,12 +21,32 @@ function Comentario({
 }) {
   const { userData, setUserData } = useContext(AppContext);
   const db = getFirestore();
+  //esta el like de la persona que hizo login en los likes del tweet ?
+  const isUidDueñoinlikes = likes.includes(uidDueño);
+  const imgBtnLike = isUidDueñoinlikes
+    ? "../../../img/Vector_corazon_rojo.png"
+    : "../../../img/Vector_corazon_blanco.png";
 
   async function borrarTweet(id) {
     try {
       await deleteDoc(doc(db, "tweets", id));
     } catch (e) {
       console.log("Error al borrar el post", e);
+    }
+  }
+  async function setLike() {
+    const comentarioRef = doc(db, "tweets", id);
+
+    if (isUidDueñoinlikes === true) {
+      // borrar like
+      await updateDoc(comentarioRef, {
+        likes: arrayRemove(uidDueño),
+      });
+    } else {
+      // agregar like
+      await updateDoc(comentarioRef, {
+        likes: arrayUnion(uidDueño),
+      });
     }
   }
 
@@ -33,8 +60,8 @@ function Comentario({
             <h3>- {fecha} </h3>
           </div>
           <p className="comentario_contenido">{comentario}</p>
-          <button className="btn_like">
-            <img height="13px" src="./img/Vector_corazon_blanco.png" alt="" />
+          <button className="btn_like" onClick={setLike}>
+            <img height="13px" src={imgBtnLike} alt="" />
           </button>
           <span>{likes.length}</span>
 
