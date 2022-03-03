@@ -3,7 +3,7 @@
   justify-content: space-around;
   font-family: "Fira Code", monospace;
   font-weight: 400;
-  width: 550px;
+  max-width: 550px;
   padding: 28px;
   color: #ffffff;
 }
@@ -30,6 +30,11 @@
   margin-right: 20px;
 }
 
+.comentario_contenido {
+  max-width: 350px;
+  overflow: hidden;
+}
+
 .comentarios .btn_like {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -43,7 +48,7 @@
   height: 20px;
 }
 
-.comentarios .btn_vasura {
+.comentarios .btn_basura {
   width: 24px;
   height: 20px;
   border: none;

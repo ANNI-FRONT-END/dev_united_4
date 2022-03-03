@@ -48,6 +48,7 @@ header {
 .comentario .caja_escribir .input {
   width: 470px;
   height: 113px;
+  resize: none;
   display: flex;
   background-color: #2f112d;
   color: #914d8b;

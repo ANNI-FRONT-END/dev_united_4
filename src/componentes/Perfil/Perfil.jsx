@@ -4,14 +4,15 @@ import { AppContext } from "../../context/AppContext";
 import { collection, doc, setDoc, getFirestore } from "firebase/firestore";
 import { Link } from "react-router-dom";
 
-function Perfil() {
+function Perfil({ photo, username }) {
+  const { userData, setUserData } = useContext(AppContext);
   return (
     <>
       <header>
         <section className="header">
           <button className="devolverse">
-            <img src="./img/vector_ir_atras.png" alt="" />
-            <span className="header_username">USERNAME</span>
+            <img src={photo} alt="" />
+            <span className="header_username">{username}</span>
           </button>
           <Link id="link" to={"/"}>
             <button className="logout">

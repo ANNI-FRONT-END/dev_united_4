@@ -18,6 +18,7 @@ function Header_home() {
       photo: userData.photo,
       username: userData.username,
       likes: [],
+      uidDueño: userData.uid,
     };
 
     await setDoc(referencia, tweetData);
@@ -39,9 +40,8 @@ function Header_home() {
         <section className="comentario">
           <div className="caja_escribir">
             <img src={userData.photo} alt="" />
-            <input
+            <textarea
               className="input"
-              type="text"
               placeholder="What’s happening? "
               onChange={(e) => {
                 setComentario(e.target.value);
