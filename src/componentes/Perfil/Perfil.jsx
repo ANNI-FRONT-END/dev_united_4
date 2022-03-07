@@ -44,7 +44,7 @@ function Perfil() {
         <section className="perfil_usuario">
           <div className="perfil">
             <img src={userData.photo} alt="" />
-            <span>{userData.username}</span>
+            <span className="perfil_username">{userData.username}</span>
           </div>
           <div className="btn_perfil">
             <button

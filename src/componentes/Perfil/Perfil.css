@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   background-color: #2e132c;
+  font-family: "Fira Code", monospace;
 }
 
 header {
@@ -46,9 +47,13 @@ header {
 
 .logout > span {
   background-color: #f50d5a;
+  color: #150714;
+  font-weight: 700;
 }
 .logout > img {
   background-color: #f50d5a;
+  width: 25px;
+  height: 20px;
 }
 #link {
   text-decoration: none;
@@ -56,14 +61,13 @@ header {
 
 .perfil_usuario {
   display: flex;
-  font-family: sans-serif;
   text-align: center;
   background-color: #150714;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  height: 270px;
-  padding: 20px;
+  height: 283px;
+  font-weight: 700;
 }
 
 .perfil_usuario .perfil {
@@ -77,9 +81,17 @@ header {
 }
 
 .perfil_usuario img {
-  background-color: #150714;
   width: 134px;
-  border: solid 1px;
+  border: solid 5px #800fff;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.perfil_usuario .perfil_username {
+  background-color: #800fff;
+  color: #150714;
+  font-size: 20px;
+  padding: 5px;
 }
 
 .perfil_usuario .btn_perfil {

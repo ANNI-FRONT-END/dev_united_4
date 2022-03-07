@@ -20,6 +20,7 @@
   display: flex;
   font-family: "Fira Code", monospace;
   margin-bottom: 20px;
+  min-width: 400px;
 }
 
 .comentarios .user_name_fecha .username {
