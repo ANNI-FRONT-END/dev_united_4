@@ -109,13 +109,19 @@ header {
   border: none;
   color: #150714;
   cursor: pointer;
+  background-color: #60265b;
 }
 .perfil_usuario .btn_perfil > button.btn_favorites {
   width: 50%;
   height: 46px;
   border: none;
   color: #150714;
-  background-color: #60265b;
+  margin-left: 2px;
+}
+
+.perfil_usuario .btn_perfil > button:hover {
+  color: #ffffff;
+  background-color: #150714;
 }
 
 .tweets_contenedor {
