@@ -27,7 +27,7 @@ function Registro() {
   return (
     <section className="login">
       <section className="login-izq">
-        <img src="./img/logo_completo.png" alt="" />
+        <img src="../../img/logo_completo.png" alt="" />
       </section>
       <section className="login-der">
         <h1>

@@ -27,7 +27,7 @@ function Perfil() {
         <section className="header">
           <Link id="link" to={"/Home"}>
             <button className="devolverse">
-              <img src="../../../img/vector_ir_atras.png" alt="" />
+              <img src="../../img/vector_ir_atras.png" alt="" />
               <span className="header_username">{userData.username}</span>
             </button>
           </Link>
@@ -35,7 +35,7 @@ function Perfil() {
           <Link id="link" to={"/"}>
             <button className="logout">
               <span>LOGOUT</span>
-              <img className="" src="./img/vector_logout.png" alt="" />
+              <img className="" src="../../img/vector_logout.png" alt="" />
             </button>
           </Link>
         </section>

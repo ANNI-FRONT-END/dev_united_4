@@ -24,8 +24,8 @@ function Comentario({
   //esta el like de la persona que hizo login en los likes del tweet ?
   const isUidDueñoinlikes = likes.includes(userData.uid);
   const imgBtnLike = isUidDueñoinlikes
-    ? "../../../img/Vector_corazon_rojo.png"
-    : "../../../img/Vector_corazon_blanco.png";
+    ? "../../img/Vector_corazon_blanco.png"
+    : "../../img/Vector_corazon_blanco.png";
 
   async function borrarTweet(id) {
     try {
@@ -79,7 +79,7 @@ function Comentario({
               borrarTweet(id);
             }}
           >
-            <img height="13px" src="./img/Vector_basura.png" alt="" />
+            <img height="13px" src="../../img/Vector_basura.png" alt="" />
           </button>
         )}
       </div>

@@ -65,7 +65,7 @@ function ButtonLogin() {
   return (
     <section className="login">
       <section className="login-izq">
-        <img src="../../../img/logo_completo.png" alt="" />
+        <img src="../../img/logo_completo.png" alt="" />
       </section>
       <section className="login-der">
         <h1>
@@ -78,7 +78,7 @@ function ButtonLogin() {
         </p>
         <button className="sign-in" onClick={login}>
           <div className="fondo-blanco">
-            <img src="../../../img/logo_gmail.png" alt="" />
+            <img src="../../img/logo_gmail.png" alt="" />
           </div>
           <span>Sign in with Google</span>
         </button>

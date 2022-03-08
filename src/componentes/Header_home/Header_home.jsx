@@ -32,8 +32,8 @@ function Header_home() {
           <Link to={"/Perfil"}>
             <img className="perfil_photo" src={userData.photo} alt="" />
           </Link>
-          <img src="./img/bandera_log.png" alt="" />
-          <img className="nombre" src="./img/devs_united.png" alt="" />
+          <img src="../../img/bandera_log.png" alt="" />
+          <img className="nombre" src="../../img/devs_united.png" alt="" />
         </section>
       </header>
       <main>
