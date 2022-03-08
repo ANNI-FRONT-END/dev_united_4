@@ -3,6 +3,8 @@ import "./Header_home.css";
 import { AppContext } from "../../context/AppContext";
 import { collection, doc, setDoc, getFirestore } from "firebase/firestore";
 import { Link } from "react-router-dom";
+import BanderaLog from "../../img/bandera_log.png";
+import DevsUnited from "../../img/devs_united.png";
 
 function Header_home() {
   const { userData, setUserData } = useContext(AppContext);
@@ -32,8 +34,8 @@ function Header_home() {
           <Link to={"/Perfil"}>
             <img className="perfil_photo" src={userData.photo} alt="" />
           </Link>
-          <img src="../../img/bandera_log.png" alt="" />
-          <img className="nombre" src="../../img/devs_united.png" alt="" />
+          <img src={BanderaLog} alt="" />
+          <img className="nombre" src={DevsUnited} alt="" />
         </section>
       </header>
       <main>

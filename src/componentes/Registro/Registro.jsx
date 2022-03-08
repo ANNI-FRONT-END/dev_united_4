@@ -3,6 +3,7 @@ import "./Registro.css";
 import { Link } from "react-router-dom";
 import { doc, getFirestore, updateDoc } from "firebase/firestore";
 import { AppContext } from "../../context/AppContext";
+import LogoCompleto from "../../img/logo_completo.png";
 
 function Registro() {
   const [username, setUsername] = useState("");
@@ -27,7 +28,7 @@ function Registro() {
   return (
     <section className="login">
       <section className="login-izq">
-        <img src="../../img/logo_completo.png" alt="" />
+        <img src={LogoCompleto} alt="" />
       </section>
       <section className="login-der">
         <h1>

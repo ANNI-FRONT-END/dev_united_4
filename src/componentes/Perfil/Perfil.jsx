@@ -4,6 +4,8 @@ import { AppContext } from "../../context/AppContext";
 import { collection, doc, setDoc, getFirestore } from "firebase/firestore";
 import { Link } from "react-router-dom";
 import Comentario from "../Comentario/Comentario";
+import BtnIrAtras from "../../img/vector_ir_atras.png";
+import BtnLogoOut from "../../img/vector_logout.png";
 
 function Perfil() {
   const { userData, setUserData, tweets, setTweets } = useContext(AppContext);
@@ -27,7 +29,7 @@ function Perfil() {
         <section className="header">
           <Link id="link" to={"/Home"}>
             <button className="devolverse">
-              <img src="../../img/vector_ir_atras.png" alt="" />
+              <img src={BtnIrAtras} alt="" />
               <span className="header_username">{userData.username}</span>
             </button>
           </Link>
@@ -35,7 +37,7 @@ function Perfil() {
           <Link id="link" to={"/"}>
             <button className="logout">
               <span>LOGOUT</span>
-              <img className="" src="../../img/vector_logout.png" alt="" />
+              <img className="" src={BtnLogoOut} alt="" />
             </button>
           </Link>
         </section>

@@ -5,6 +5,8 @@ import { app } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
 import { doc, getFirestore, setDoc, getDoc } from "firebase/firestore";
 import { AppContext } from "../../context/AppContext";
+import LogoCompleto from "../../img/logo_completo.png";
+import LogoGmail from "../../img/logo_gmail.png";
 
 function ButtonLogin() {
   const auth = getAuth();
@@ -65,7 +67,7 @@ function ButtonLogin() {
   return (
     <section className="login">
       <section className="login-izq">
-        <img src="../../img/logo_completo.png" alt="" />
+        <img src={LogoCompleto} alt="" />
       </section>
       <section className="login-der">
         <h1>
@@ -78,7 +80,7 @@ function ButtonLogin() {
         </p>
         <button className="sign-in" onClick={login}>
           <div className="fondo-blanco">
-            <img src="../../img/logo_gmail.png" alt="" />
+            <img src={LogoGmail} alt="" />
           </div>
           <span>Sign in with Google</span>
         </button>
