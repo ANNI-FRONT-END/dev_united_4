@@ -22,7 +22,7 @@ function Comentario({
   const { userData, setUserData } = useContext(AppContext);
   const db = getFirestore();
   //esta el like de la persona que hizo login en los likes del tweet ?
-  const isUidDueñoinlikes = likes.includes(uidDueño);
+  const isUidDueñoinlikes = likes.includes(userData.uid);
   const imgBtnLike = isUidDueñoinlikes
     ? "../../../img/Vector_corazon_rojo.png"
     : "../../../img/Vector_corazon_blanco.png";
@@ -36,16 +36,21 @@ function Comentario({
   }
   async function setLike() {
     const comentarioRef = doc(db, "tweets", id);
+    const uidLogin = userData.uid;
 
     if (isUidDueñoinlikes === true) {
+      const newLikes = likes.filter((like) => {
+        return like !== uidLogin;
+      });
+
       // borrar like
       await updateDoc(comentarioRef, {
-        likes: arrayRemove(uidDueño),
+        likes: newLikes,
       });
     } else {
       // agregar like
       await updateDoc(comentarioRef, {
-        likes: arrayUnion(uidDueño),
+        likes: [...likes, uidLogin],
       });
     }
   }

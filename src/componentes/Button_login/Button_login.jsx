@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import "./Button_login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../../../firebase";
 import { useNavigate } from "react-router-dom";
 import { doc, getFirestore, setDoc, getDoc } from "firebase/firestore";
 import { AppContext } from "../../context/AppContext";
+import "./Button_login.css";
 
 function ButtonLogin() {
   const auth = getAuth();
