@@ -1,0 +1,40 @@
+.popUp_contenedor {
+  background-color: #2f112da6;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  padding: 20px 50px;
+  background-color: #914d8b;
+  color: white;
+  border-radius: 20px;
+}
+
+.contenedor > h1 {
+  padding: 20px 50px;
+  background-color: #914d8b;
+  color: white;
+}
+
+.contenedor_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #914d8b;
+}
+.contenedor button {
+  padding: 20px 50px;
+  background-color: #2f112da6;
+  cursor: pointer;
+  margin: 20px;
+  color: white;
+  font-size: 50px;
+  border-radius: 20px;
+}

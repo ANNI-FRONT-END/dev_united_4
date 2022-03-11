@@ -12,6 +12,7 @@ import {
   arrayUnion,
   arrayRemove,
 } from "firebase/firestore";
+import PopUp from "../PopUp/PopUp";
 
 function Comentario({
   comentario,
@@ -23,6 +24,9 @@ function Comentario({
   uidDueño,
 }) {
   const { userData, setUserData } = useContext(AppContext);
+
+  const [isPopUp, setIsPopUp] = useState(false);
+
   const db = getFirestore();
   //esta el like de la persona que hizo login en los likes del tweet ?
   const isUidDueñoinlikes = likes.includes(userData.uid);
@@ -79,13 +83,20 @@ function Comentario({
           <button
             className="btn_basura"
             onClick={() => {
-              borrarTweet(id);
+              setIsPopUp(true);
+              //borrarTweet(id);
             }}
           >
             <img height="13px" src={VectorBasura} alt="" />
           </button>
         )}
       </div>
+      {isPopUp && (
+        <PopUp
+          closePopUp={() => setIsPopUp(false)}
+          confirmarBorrarTweet={() => borrarTweet(id)}
+        />
+      )}
     </>
   );
 }
